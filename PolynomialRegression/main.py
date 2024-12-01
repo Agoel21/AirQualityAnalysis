@@ -5,7 +5,7 @@ from linear_regression import LinearRegression
 from quadratic_regression import QuadraticRegression
 from cubic_regression import CubicRegression
 
-data = pd.read_csv('data/biweekly_air_quality_data.csv')
+data = pd.read_csv('../Data/biweekly_air_quality_data.csv')
 
 X = data['co'].values.reshape(-1, 1)
 y = data['pm2_5'].values
