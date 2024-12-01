@@ -17,3 +17,10 @@ class LinearRegression:
     ss_residual = np.sum((y - y_pred)**2)
     return 1- (ss_residual / ss_total)
   
+  def predict_inverse(self, target_pm25):
+    b0, b1 = self.coefficients 
+    if b1 != 0:
+      CO_safe = (target_pm25 - b0) / b1
+      return CO_safe
+    else:
+      raise ValueError("Slope coefficient is zero, cannot calculate required CO value.")

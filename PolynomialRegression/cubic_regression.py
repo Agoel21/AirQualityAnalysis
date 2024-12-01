@@ -1,5 +1,8 @@
-import numpy as np;
+import numpy as np
+import warnings
 from scipy.optimize import fsolve
+
+warnings.filterwarnings("ignore", message="The iteration is not making good progress")
 
 class CubicRegression: 
   def _init_(self):
@@ -17,4 +20,13 @@ class CubicRegression:
     ss_total = np.sum((y - np.mean(y))**2)
     ss_residual = np.sum((y - y_pred)**2)
     return 1 - (ss_residual / ss_total)
+  
+  def predict_inverse(self, target_pm25):
+
+    def cubic_equation(CO):
+      return self.coefficients[0] + self.coefficients[1] * CO + self.coefficients[2] * CO**2 + self.coefficients[3] * CO**3 - target_pm25
+
+    CO_safe = fsolve(cubic_equation, x0=0) 
+
+    return CO_safe[0]
   

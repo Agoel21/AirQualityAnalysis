@@ -1,4 +1,5 @@
 import numpy as np;
+from scipy.optimize import fsolve
 
 class QuadraticRegression: 
   def _init_(self):
@@ -17,4 +18,14 @@ class QuadraticRegression:
     ss_residual = np.sum((y - y_pred)**2)
     return 1 - (ss_residual / ss_total)
   
+  def predict_inverse(self, target_pm25):
+      
+    b0, b1, b2 = self.coefficients  
+    
+    def equation(co):
+        return b2 * co**2 + b1 * co + b0 - target_pm25
+    
+    co_solution = fsolve(equation, x0=0)
+    
+    return co_solution[0]
   
