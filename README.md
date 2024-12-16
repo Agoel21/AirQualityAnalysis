@@ -16,26 +16,35 @@ unzip AirQualityAnalysis.zip -d AirQualityAnalysis
 cd AirQualityAnalysis
 ```
 
-Create a virtual environment 
+### 2. Create a virtual environment 
 ```bash 
 python3 -m venv env
 source env/bin/activate
 ```
 
-Install pip 
+### 3. Install pip 
 ```bash
 python3 -m ensurepip --upgrade
 python3 -m pip install --upgrade pip
 ```
 
-Install necessary libraries from requirements.txt 
+### 4. Install necessary libraries from requirements.txt 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
 
-Run the Polynomial Regression program
+### 5. cd into the Polynomial Regression directory
 ```bash
 cd PolynomialRegression
+```
+
+### 6. Run the program
+```bash
 python3 main.py
+```
+
+### 7. To compare the ($R^2$) score and Computational Complexity for the different polynomial degrees
+```bash 
+python3 analysis.py
 ```
