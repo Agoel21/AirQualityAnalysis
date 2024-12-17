@@ -2,10 +2,9 @@
 
 This project analyzes various pollutant data using Polynomial regression, Exponential Regression, and Simpson's Method. 
 
-Follow the steps below to set up and run the program.
+Follow the steps below to set up and run the program on the CSCE server.
 
-
-## Polynomial Regression Execution Guide
+## Common steps 
 
 ### 1. Download and Extract the Files
 
@@ -33,6 +32,7 @@ python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 ```
 
+## Polynomial Regression Execution steps
 
 ### 5. cd into the Polynomial Regression directory
 ```bash
@@ -48,3 +48,28 @@ python3 main.py
 ```bash 
 python3 analysis.py
 ```
+
+## Exponential Regression and Simpson's Method exeution steps
+
+### 5. Run Jupyter Notebook on the Server
+```bash
+jupyter notebook --no-browser --port=8888
+```
+
+### 6. Forward the Port to Your Local Machine (can jump to step 7 step if running on personal computer and CSCE server)
+```bash
+ssh -L 8888:localhost:8888 your_username@university_server_address
+```
+
+### 7. Access the Notebook
+Open the notebook on the browser using: 
+Copy and paste the link on the server terminal or 
+go to "http://localhost:8888" and copy and paste the token from the Jupyter Notebook output (shown on the server terminal)
+
+
+### 8. Run the Notebook
+Navigate to the ExponentialRegression and SimpsonsMethod directory in the Jupyter interface and open the .ipynb file. Run all cells.
+
+### Simpler method to run without CSCE server: Upload the notebooks and csv file to Google Colab or Jupyter Notebooks to run them.
+
+### Note: All the results already visible in the .ipynb files for Exponential Regression and Simpson's Method
