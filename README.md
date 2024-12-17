@@ -4,9 +4,19 @@ This project analyzes various pollutant data using Polynomial regression, Expone
 
 Presentation video link: https://www.youtube.com/watch?v=yVF_1T74Hq4 
 
+## Description
+### Exponential Regression
+Implementation of the algorithm in ExponentialRegression/exponentialRegression.ipynb along with all the metrics. Relevant graph images are saved within the folder.
+
+### Polynomial Regression
+Implementation of all three (Linear, Quadratic, Cubic) in the PolynomialRegression folder through main.py. All the metrics are generated through analysis.py.
+
+### Simpson's method
+Implementation of the algorithm in Simpsonsmethod folder along with all the metrics. Relevant graph images are saved within the folder.
+
 Follow the steps below to set up and run the program on the CSCE server.
 
-## Common steps 
+## Common Execution steps 
 
 ### 1. Download and Extract the Files
 
