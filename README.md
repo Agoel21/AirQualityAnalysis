@@ -65,7 +65,8 @@ ssh -L 8888:localhost:8888 your_username@university_server_address
 
 ### 7. Access the Notebook
 Open the notebook on the browser using: 
-Copy and paste the link on the server terminal or 
+Copy and paste the link shown on the server terminal 
+or 
 go to "http://localhost:8888" and copy and paste the token from the Jupyter Notebook output (shown on the server terminal)
 
 
