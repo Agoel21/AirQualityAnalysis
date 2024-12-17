@@ -2,6 +2,8 @@
 
 This project analyzes various pollutant data using Polynomial regression, Exponential Regression, and Simpson's Method. 
 
+Presentation video link: https://www.youtube.com/watch?v=yVF_1T74Hq4 
+
 Follow the steps below to set up and run the program on the CSCE server.
 
 ## Common steps 
